@@ -16,10 +16,15 @@ namespace EfConsoleApp2.Services
             _robotRepository = robotRepository;
         }
 
-        public async Task CreateRobotAsync(string name)
+        public async Task CreateRobotAsync(string name, int userId)
         {
-            var robot = new Robot { Name = name };
+            var robot = new Robot { Name = name, UserId = userId };
             await _robotRepository.PostAsync(robot);
+        }
+
+        public async Task<Robot> GetByIdAsync(int id)
+        {
+            return await _robotRepository.GetByIdAsync(id);
         }
     }
 }

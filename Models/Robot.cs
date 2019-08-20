@@ -14,7 +14,7 @@ namespace EfConsoleApp2.Models
         public string Name { get; set; }
 
         public int UserId { get; set; }
-        [ForeignKey("User")]
+        [ForeignKey("UserId")]
         public virtual User User { get; set; }
         public virtual List<Session> Sessions { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EfConsoleApp2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace EfConsoleApp2.Services
 {
     interface IRobotService
     {
-        Task CreateRobotAsync(string name);
+        Task<Robot> GetByIdAsync(int id);
+        Task CreateRobotAsync(string name, int userId);
     }
 }

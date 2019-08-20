@@ -8,6 +8,7 @@ namespace EfConsoleApp2
 {
     public interface IRepo<T>
     {
+        Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
         Task PostAsync(T arg);
         Task UpdateAsync(T arg, int id);

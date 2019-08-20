@@ -13,7 +13,7 @@ namespace EfConsoleApp2.Models
         public string Name { get; set; }
 
         public int RobotId { get; set; }
-        [ForeignKey("Robot")]
+        [ForeignKey("RobotId")]
         public virtual Robot Robot { get; set; }
 
     }
